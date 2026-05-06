@@ -1,22 +1,17 @@
-
 include README.md
 include LICENSE
-include requirements.txt
+include CHANGELOG.md
 include setup.py
 include pyproject.toml
+include requirements.txt
 
 recursive-include all_predict *.py
-recursive-include all_predict/tests *.py
-recursive-include examples *.ipynb
 recursive-include examples *.py
-
-# Include CSV or data files if provided
-global-include *.csv
-
-# Exclude unnecessary files
+recursive-include examples *.ipynb
+recursive-include examples *.csv
+recursive-include docs *.md
 prune __pycache__
 prune .git
-prune .github
 prune build
 prune dist
 prune *.egg-info

@@ -1,21 +1,24 @@
-# __init__.py for all_predict package
+"""Public package interface for all_predict."""
 
-"""All Predict - Enhanced LazyPredict-style library with extended model support and hyperparameter tuning."""
-
-from .regression import LazyRegressorPlus
-from .classification import LazyClassifierPlus
-from .model_registry import (
-    REGRESSORS,
-    CLASSIFIERS,
-    REGRESSOR_PARAM_GRIDS,
-    CLASSIFIER_PARAM_GRIDS,
-)
+from .__version__ import __author__, __email__, __version__
+from .classification import AllClassifier, AutoClassifier, LazyClassifierPlus
+from .persistence import load_model, save_model
+from .regression import AllRegressor, AutoRegressor, LazyRegressorPlus
+from .reporting import save_predictions, save_results, save_run_summary
 
 __all__ = [
-    "LazyRegressorPlus",
+    "__author__",
+    "__email__",
+    "__version__",
+    "AllClassifier",
+    "AllRegressor",
+    "AutoClassifier",
+    "AutoRegressor",
     "LazyClassifierPlus",
-    "REGRESSORS",
-    "CLASSIFIERS",
-    "REGRESSOR_PARAM_GRIDS",
-    "CLASSIFIER_PARAM_GRIDS",
+    "LazyRegressorPlus",
+    "load_model",
+    "save_model",
+    "save_predictions",
+    "save_results",
+    "save_run_summary",
 ]
